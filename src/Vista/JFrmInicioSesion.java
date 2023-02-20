@@ -64,7 +64,7 @@ public class JFrmInicioSesion extends javax.swing.JFrame {
         jPanelTransparente3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlblIconoContraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlblIconoContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Contraseña.png"))); // NOI18N
+        jlblIconoContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Contrasenia.png"))); // NOI18N
         jPanelTransparente3.add(jlblIconoContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 30, 50));
 
         jpsfContraseña.setForeground(new java.awt.Color(0, 0, 0));

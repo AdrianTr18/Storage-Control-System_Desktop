@@ -1,13 +1,19 @@
 package Controlador;
 
+import DAO.DAO_Usuarios;
+import Main.Principal;
+import Modelo.Usuarios;
 import Procesos.ProcesosIniciarSesion;
 import Vista.JFrmInicioSesion;
+import Vista.JFrmRegistrarUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorIniciarSesion implements ActionListener{
     //Variables
     JFrmInicioSesion vista;
+    DAO_Usuarios crud;
+    Usuarios usu;
     //Constructor
     public ControladorIniciarSesion(JFrmInicioSesion frminicio){
         vista=frminicio;
@@ -23,7 +29,12 @@ public class ControladorIniciarSesion implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vista.jbtnLogin){
-            
+            crud = new DAO_Usuarios();
+            if(crud.ValidarUsuario( vista.jtxtUsuario, vista.jpsfContraseña) == true){
+                System.out.println("Entraste a la interfaz principal");
+            } else {
+                System.out.println("No ingresaste a la interfaz principal");
+            }
         }
         
         if(e.getSource() == vista.jbtnContraseña){
@@ -31,7 +42,10 @@ public class ControladorIniciarSesion implements ActionListener{
         }
         
         if(e.getSource() == vista.jbtnRegistrar){
-            
+            Principal.frmregusu = new JFrmRegistrarUsuario();
+            Principal.conuregusu = new ControladorRegistrarUsuario(Principal.frmregusu);
+            vista.dispose();
+            Principal.frmregusu.setVisible(true);
         }
         
         if(e.getSource() == vista.jbtnSalir){

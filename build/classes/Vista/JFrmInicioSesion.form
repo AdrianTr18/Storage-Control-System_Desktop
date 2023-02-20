@@ -194,7 +194,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Imagenes/Contrase&#xf1;a.png"/>
+                      <Image iconType="3" name="/Imagenes/Contrasenia.png"/>
                     </Property>
                   </Properties>
                   <Constraints>

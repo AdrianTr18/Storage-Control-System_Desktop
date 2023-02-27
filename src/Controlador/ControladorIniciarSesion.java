@@ -5,6 +5,7 @@ import Main.Principal;
 import Modelo.Usuarios;
 import Procesos.ProcesosIniciarSesion;
 import Vista.JFrmInicioSesion;
+import Vista.JFrmMenuPrincipal;
 import Vista.JFrmRegistrarUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,6 +33,9 @@ public class ControladorIniciarSesion implements ActionListener{
             crud = new DAO_Usuarios();
             if(crud.ValidarUsuario( vista.jtxtUsuario, vista.jpsfContraseña) == true){
                 System.out.println("Entraste a la interfaz principal");
+                Principal.frmmenu = new JFrmMenuPrincipal();
+                Principal.conmenu = new ControladorMenuPrincipal(Principal.frmmenu);
+                vista.dispose();
             } else {
                 System.out.println("No ingresaste a la interfaz principal");
             }
@@ -45,7 +49,6 @@ public class ControladorIniciarSesion implements ActionListener{
             Principal.frmregusu = new JFrmRegistrarUsuario();
             Principal.conuregusu = new ControladorRegistrarUsuario(Principal.frmregusu);
             vista.dispose();
-            Principal.frmregusu.setVisible(true);
         }
         
         if(e.getSource() == vista.jbtnSalir){

@@ -30,6 +30,7 @@ public class JFrmInicioSesion extends javax.swing.JFrame {
 
         fSGradientPanel1.setFSEndColor(new java.awt.Color(66, 134, 244));
         fSGradientPanel1.setFSStartColor(new java.awt.Color(44, 62, 80));
+        fSGradientPanel1.setFSTransparentControls(false);
         fSGradientPanel1.setFocusable(false);
 
         jpnlDatos.setColorPrimario(new java.awt.Color(32, 66, 130));

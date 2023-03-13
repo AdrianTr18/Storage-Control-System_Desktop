@@ -23,6 +23,7 @@ public class ControladorIniciarSesion implements ActionListener{
         vista.jbtnContraseña.addActionListener(this);
         vista.jbtnRegistrar.addActionListener(this);
         frminicio.setLocationRelativeTo(null);
+        vista.setIconImage(Principal.img.getIconImage());
         ProcesosIniciarSesion.Presentacion(frminicio);
         frminicio.setVisible(true);
     }

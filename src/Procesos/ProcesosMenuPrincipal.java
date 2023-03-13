@@ -8,6 +8,7 @@ public class ProcesosMenuPrincipal {
     public static void Presentacion(JFrmMenuPrincipal frmprincipal){
         frmprincipal.setLocationRelativeTo(null);
         frmprincipal.setVisible(true);
+        frmprincipal.setTitle("Sistema de Control de Almacenamiento");
         //frmprincipal.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 }

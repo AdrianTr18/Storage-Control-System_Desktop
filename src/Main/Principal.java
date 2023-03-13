@@ -1,11 +1,8 @@
 package Main;
 
-import Controlador.ControladorIniciarSesion;
-import Controlador.ControladorMenuPrincipal;
-import Controlador.ControladorRegistrarUsuario;
-import Vista.JFrmInicioSesion;
-import Vista.JFrmMenuPrincipal;
-import Vista.JFrmRegistrarUsuario;
+import Controlador.*;
+import Formatos.CambiarImagen;
+import Vista.*;
 
 public class Principal {
 
@@ -17,6 +14,14 @@ public class Principal {
     
     public static ControladorMenuPrincipal conmenu;
     public static JFrmMenuPrincipal frmmenu;
+    
+    public static ControladorProductosEntrantes conproductosentrantes;
+    public static JIFrmProductosEntrantes frmproductosentrantes;
+    
+    public static ControladorProductosSalientes conproductossalientes;
+    public static JIFrmProductosSalientes frmproductossalientes;
+    
+    public static CambiarImagen img;
     
     public static void main(String[] args) {
         

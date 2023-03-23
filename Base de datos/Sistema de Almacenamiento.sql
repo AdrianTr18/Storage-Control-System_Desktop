@@ -1,3 +1,6 @@
+-- Creamos la base de datos
+create database sistema_almacenamiento;
+
 create table Usuarios (
 	IDUsuario int primary key auto_increment,
     nombre varchar (50) not null,

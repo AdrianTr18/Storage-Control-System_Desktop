@@ -5,7 +5,7 @@ import Modelo.Usuarios;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class DAO_Usuarios extends ConexionDB{
+public class DAO_Usuarios extends ConexionDB{ 
     //Constructor
     public DAO_Usuarios(){};
     //Métodos
@@ -48,5 +48,21 @@ public class DAO_Usuarios extends ConexionDB{
             Mensajes.showMessage("ERROR no se pudo validar el usuario o la contraseña "+ e.toString());
         }
         return false;
+    }
+    
+    public String RecuperarNombre(JTextField usuario){
+        String nombre = "";
+        try {
+            ps = conexion.prepareStatement("Select nombre from Usuarios where usuario = ?;");
+            ps.setString(1, usuario.getText());
+            rs = ps.executeQuery();
+            if(rs.next()){
+                nombre = rs.getString(1);
+                System.out.println(nombre);
+            }
+        } catch (Exception e) {
+            Mensajes.showMessage("Error no se pudo recuperar el nombre");
+        }
+        return nombre;
     }
 }

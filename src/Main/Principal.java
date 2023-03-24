@@ -30,6 +30,9 @@ public class Principal {
         
         frminicio = new JFrmInicioSesion();
         coninicio = new ControladorIniciarSesion(frminicio);
+        //Objetos que nos permiten interactuar con los paneles
+        frmproductossalientes = new JIFrmProductosSalientes();
+        frmproductosentrantes = new JIFrmProductosEntrantes();
     }
 }
  

@@ -3,6 +3,7 @@ package Procesos;
 import DAO.DAO_Usuarios;
 import Main.Principal;
 import Vista.JFrmMenuPrincipal;
+import javax.swing.JInternalFrame;
 
 public class ProcesosMenuPrincipal {
 
@@ -15,5 +16,11 @@ public class ProcesosMenuPrincipal {
         usua = new DAO_Usuarios();
         String nombre = usua.RecuperarNombre(Principal.frminicio.jtxtUsuario);
         frmprincipal.jlblNombreUser.setText("¡Bienvenido, "+nombre+"!");
+    }
+    
+    public static void CerrarPanel(JInternalFrame internal){
+        if(internal.isEnabled()){
+            internal.dispose();
+        }
     }
 }
